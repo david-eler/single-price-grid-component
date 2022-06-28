@@ -1,0 +1,151 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #E5EFF5;
+    display: grid;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "description description"
+    "subscription why-us";
+    max-width: 1440px;
+    margin: 25% auto;
+}
+
+.description {
+    grid-area: description;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px 8px 0 0;
+}
+
+.description h1 {
+    font-size: 24px;
+    color: #2AB2AF;
+    font-weight: bold;
+}
+
+.description h2 {
+    font-size: 18px;
+    color: #C0DF34;
+    font-weight: bold;
+    margin-top: 26px;
+}
+
+.description p {
+    font-size: 16px;
+    color: #98A6BD;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.subscription {
+    grid-area: subscription;
+    display: grid;
+    background-color: #2AB2AF;
+    padding: 40px;
+    border-radius: 0 0 0 8px;
+}
+
+.subscription h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.price-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: start;
+}
+
+.price-box .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-right: 8px; 
+}
+
+.price-box p {
+    color: #ccd3df;
+}
+
+.subscription > p {
+    font-size: 16px;
+    color: white;
+    margin: 4px 0 0 0;
+}
+
+.subscription a {
+    text-decoration: none;
+    align-self: center;
+    justify-self: start;
+    color: white;
+    font-weight: bold;
+    background-color: #C0DF34;
+    border-radius: 6px;
+    padding: 16px 90px;
+}
+
+.subscription a:hover {
+    background-color: coral;
+}
+
+.why-us {
+    grid-area: why-us;
+    background-color: #44c6c2;
+    padding: 40px;
+    border-radius: 0 0 8px 0;
+}
+
+.why-us h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.why-us ul {
+    margin-top: 24px;
+}
+
+.why-us ul li {
+    color: #ccd3df;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px){
+
+    body {
+        min-width: 375px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "description"
+        "subscription"
+        "why-us";
+        margin: 40px 20px;
+    }
+
+    .description {
+        grid-area: description;
+    }
+
+    .subscription {
+        grid-area: subscription;
+        gap: 15px;
+        border-radius: 0;
+    }
+
+    .why-us {
+        grid-area: why-us;
+        border-radius: 0 0 8px 8px;
+    }
+}
