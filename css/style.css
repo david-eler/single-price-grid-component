@@ -126,6 +126,7 @@ body {
 @media (max-width: 640px){
 
     body {
+        height: auto;
         min-width: 375px;
     }
 
@@ -136,7 +137,7 @@ body {
         "description"
         "subscription"
         "why-us";
-        margin: 40px 20px;
+        margin: 20px 20px;
     }
 
     .description {
